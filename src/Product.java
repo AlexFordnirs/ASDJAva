@@ -8,7 +8,7 @@ public class Product {
     {
      this.title=title;this.price=price;this.colvo=colvo;
     }
-    public  Product(int hesh){this.hesh=hesh;}
+    //public  Product(int hesh){this.hesh=hesh;}
     public void getProduct()
     {
         System.out.println("Name: "+this.title+" Price: "+ this.price+" Количество на складде "+this.colvo);
@@ -25,12 +25,12 @@ public  void setPrice(int price)
     {
         Product tmp=(Product)obj;
         boolean flag=false;
-        if((this.title.equals(tmp.title)) && tmp.colvo>=hesh) flag=true;
+        if((this.title.equals(tmp.title)) && tmp.colvo>=hesh) {flag=true; this.hesh=hesh;}
         return flag;
     }
 
-    public  void deGual()
+    public  void deGual(int g)
     {
-     this.colvo-=1;
+     this.colvo-=g;
     }
 }

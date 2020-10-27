@@ -11,34 +11,31 @@ public class Main {
         shop.add(new Product("Shuga", 5, 500));
         shop.add(new Product("GTX 3090 ti FE OC", 1, 50000));
 
-        for (Product p : shop) {
+        for (Product p : shop)
+        {
             p.getProduct();
         }
         ArrayList<Product> basket = new ArrayList<>();
 
-        System.out.println("Введите название товара");
-        String title;
+    System.out.println("Введите название товара");
+    String title;
+    Scanner scanner = new Scanner(System.in);
+    title = scanner.nextLine();
+    System.out.println("Введите количество товара");
+    int byShet=scanner.nextInt();
 
-        for (int j = 0; j < 3; j++) {
-            Scanner scanner = new Scanner(System.in);
-            title = scanner.nextLine();
-            System.out.println("Введите количество товара");
-            int byShet = scanner.nextInt();
-
-            Product p = new Product(title, 0, 0);
-            p.hesh = byShet;
+    Product p = new Product(title, 0, 0);
+    if (shop.contains(p)) {
+        int i = shop.indexOf(p);
+        basket.add(shop.get(i));
+        shop.get(i).deGual(byShet);
+    }
+    int nimb=0;
+        for (Product tmp: basket)
+        {
+           tmp.getProduct();
+           nimb=nimb+tmp.getPrice();
         }
-            if (shop.contains(p)) {
-                int i = shop.indexOf(p);
-                basket.add(shop.get(i));
-                shop.get(i).deGual();
-            }
-            int nimb = 0;
-            for (Product tmp : basket) {
-                tmp.getProduct();
-                nimb = nimb + tmp.getPrice();
-            }
-            System.out.println("Цена : " + nimb);
-        }
-
+        System.out.println("Цена : "+nimb);
+    }
 }
