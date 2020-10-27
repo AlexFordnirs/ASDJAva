@@ -31,6 +31,6 @@ public  void setPrice(int price)
 
     public  void deGual()
     {
-     this.colvo-=hesh;
+     this.colvo-=1;
     }
 }
