@@ -16,6 +16,7 @@ public class Main {
             // System.out.println(p.getProduct());
         }
         ArrayList<Product> basket = new ArrayList<>();
+
         System.out.println("Введите название товара");
         String title;
         Scanner scanner = new Scanner(System.in);

@@ -23,7 +23,7 @@ public  void setPrice(int price)
     {
         Product tmp=(Product)obj;
         boolean flag=false;
-        if((this.title.equals(tmp.title)) && this.colvo>0) flag=true;
+        if((this.title.equals(tmp.title)) && tmp.colvo>0) flag=true;
         //this.title.equals(tmp.title);
        // return super.equals(obj);
         return flag;
