@@ -22,7 +22,12 @@ public class Main {
         title = scanner.nextLine();
         Product p = new Product(title, 0, 0);
         if (shop.contains(p)) {
-            shop.indexOf(p);
+            int i=shop.indexOf(p);
+            basket.add(shop.get(i));
+        }
+        for (Product tmp: basket)
+        {
+            p.getProduct();
         }
     }
 }
