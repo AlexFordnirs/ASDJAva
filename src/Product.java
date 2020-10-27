@@ -2,14 +2,16 @@ public class Product {
     private  String title;
     private int price;
     private int colvo;
+    public int hesh;
 
     public  Product (String title, int price,int colvo)
     {
      this.title=title;this.price=price;this.colvo=colvo;
     }
+    public  Product(int hesh){this.hesh=hesh;}
     public void getProduct()
     {
-        System.out.println("Name:"+this.title+" Price:"+ this.price+"Количество на складде"+this.colvo);
+        System.out.println("Name: "+this.title+" Price: "+ this.price+" Количество на складде "+this.colvo);
     }
 public String getTitle(){return title;}
 public int getPrice(){return price;}
@@ -23,9 +25,12 @@ public  void setPrice(int price)
     {
         Product tmp=(Product)obj;
         boolean flag=false;
-        if((this.title.equals(tmp.title)) && tmp.colvo>0) flag=true;
-        //this.title.equals(tmp.title);
-       // return super.equals(obj);
+        if((this.title.equals(tmp.title)) && tmp.colvo>=hesh) flag=true;
         return flag;
+    }
+
+    public  void deGual()
+    {
+     this.colvo-=hesh;
     }
 }

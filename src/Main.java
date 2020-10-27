@@ -11,24 +11,31 @@ public class Main {
         shop.add(new Product("Shuga", 5, 500));
         shop.add(new Product("GTX 3090 ti FE OC", 1, 50000));
 
-        for (Product p : shop) {
+        for (Product p : shop)
+        {
             p.getProduct();
-            // System.out.println(p.getProduct());
         }
         ArrayList<Product> basket = new ArrayList<>();
 
-        System.out.println("Введите название товара");
-        String title;
-        Scanner scanner = new Scanner(System.in);
-        title = scanner.nextLine();
-        Product p = new Product(title, 0, 0);
-        if (shop.contains(p)) {
-            int i=shop.indexOf(p);
-            basket.add(shop.get(i));
-        }
+    System.out.println("Введите название товара");
+    String title;
+
+
+    Scanner scanner = new Scanner(System.in);
+    title = scanner.nextLine();
+    System.out.println("Введите количество товара");
+    int byShet=scanner.nextInt();
+    //Product m = new Product(byShet);
+    Product p = new Product(title, 0, 0);
+     p.hesh=byShet;
+    if (shop.contains(p)) {
+        int i = shop.indexOf(p);
+        basket.add(shop.get(i));
+        shop.get(i).deGual();
+    }
         for (Product tmp: basket)
         {
-            p.getProduct();
+           tmp.getProduct();
         }
     }
 }
