@@ -29,8 +29,8 @@ public  void setPrice(int price)
         return flag;
     }
 
-    public  void deGual(int g)
+    public  void deGual()
     {
-     this.colvo-=g;
+     this.colvo-=1;
     }
 }
